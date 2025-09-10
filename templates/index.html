@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<title>details</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<head>
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: Arial, sans-serif;
+	
+}
+body{
+	align-items:center;
+	justify-content:center;
+	display: flex;
+    flex-direction: column;
+}
+.navbar {
+            position: fixed;
+            top: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            width: 100%;
+            height: 80px;
+            padding: 35px 25px;
+            box-sizing: border-box;
+            background: #1876f2;
+            border-bottom: 1px solid #fff;
+			z-index: 1000;
+        }
+        .navbar .logo {
+            padding: 22px 20px;
+            height: 90px;
+            float: left;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        .navbar .logo span {
+            color: magenta;
+            font-size: 42px;
+        }
+        .navbar ul{
+            list-style: none;
+            float: right;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .navbar ul li a {
+            line-height: 88px;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar ul li a:hover {
+            background: magenta;
+            border-radius: 6px;
+        }
+		.box{
+			margin-left:8px;
+		}
+		h1 {
+            color: green;
+			font-size:60px;
+			margin-top:90px;
+        }
+		.p, .s{
+			margin-left:40px;
+		}
+		.s{
+			font-size:50px;
+		}
+		h2 {
+            color: #333;
+			margin-top:30px;
+        }
+		p, li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+		h4{
+			margin-top:20px;
+			margin-bottom:20px;
+		}
+		
+.slider-wrapper{
+	overflow:hidden;
+	max-width:1200px;
+	margin:0 70px 55px;
+}
+.cointainer {
+	margin-top:80px;
+	}
+.card-list .card-item{
+	color:#fff;
+	width:300px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding:35px;
+	border-radius:8px;
+	backdrop-filter:blur(30px);
+	background:rgba(255,0,0,0.5);
+	border:1px solid rgba(255,0,0,0.7);
+}
+.card-list .card-item .image{
+	width:200px;
+	height:200px;
+	border-radius:20%;
+	margin-bottom:40px;
+	border:3px solid #fff;
+	padding:4px;
+}
+.card-list .card-item .btn{
+	font-size:1.25rem;
+	padding:10px 35px;
+	color:#030728;
+	border-radius:6px;
+	font-weight:500;
+	cursor:pointer;
+	transition:0.2s ease;
+}
+.card-list .card-item .btn:hover {
+	background:rgba(255,255,255,0.4);
+	border:1px solid #fff;
+	color:black;
+
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+        <div class="logo">SIGN <span>DETECT</span></div>
+        <ul>
+            <li><a href ="home">Home</a></li>
+            <li><a href ="asl">american</a></li>
+            <li><a href ="isl">indian</a></li>
+            <li><a href ="#">details</a></li>
+			<li><a href ="help">help</a></li>
+        </ul>
+    </div>
+	<div class="box">
+	<h1>Overview</h1>
+	<div class="under-box"> 
+	<h2>Introduction:</h2>
+	<p>      <span class="s">S</span>ign language is manual communication commonly used by people who are deaf. Sign language is not universal; people who are deaf from different countries speak different sign languages. The gestures or symbols in sign language are organized in a linguistic way. Each individual gesture is called a sign. Each sign has three distinct parts: the handshape, the position of the hands, and the movement of the hands.</p>
+	
+	<p>       <span class="p">S</span>ign language, any means of communication through bodily movements, especially of the hands and arms, used when spoken communication is impossible or not desirable. The practice is probably older than speech. Sign language may be as coarsely expressed as mere grimaces, shrugs, or pointing; or it may employ a delicately nuanced combination of coded manual signals reinforced by facial expression and perhaps augmented by words spelled out in a manual alphabet. Wherever vocal communication is impossible, as between speakers of mutually unintelligible languages or when one or more would-be communicators is deaf, sign language can be used to bridge the gap. American Sign Language (ASL) and Indian Sign Language(ISL) are the most commonly used sign language in the United States.</p>
+	
+	
+	<h2>American Sign Language:</h2>
+	<p>        <span class="p">A</span>merican Sign Language (ASL) is a complete, natural language that has the same linguistic properties as spoken languages, with grammar that differs from English. ASL is expressed by movements of the hands and face. It is the primary language of many North Americans who are deaf and hard of hearing and is used by some hearing people as well.</p>
+	<u><h4>How do most children learn ASL?</h4></u>
+	<p>         <span class="p">P</span>arents are often the source of a child's early acquisition of language, but for children who are deaf, additional people may be models for language acquisition. A deaf child born to parents who are deaf and who already use ASL will begin to acquire ASL as naturally as a hearing child picks up spoken language from hearing parents. However, for a deaf child with hearing parents who have no prior experience with ASL, language may be acquired differently. In fact, 9 out of 10 children who are born deaf are born to parents who hear. Some hearing parents choose to introduce sign language to their deaf children. Hearing parents who choose to have their child learn sign language often learn it along with their child. Children who are deaf and have hearing parents often learn sign language through deaf peers and become fluent.</p>
+     
+	<div class="cointainer swiper">
+		<div class="slider-wrapper">
+			<div class="card-list swiper-wrapper">
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_0.jpg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_2.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_3.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_4.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_5.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_6.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_7.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_8.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_9.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_a.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_b.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_c.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_d.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_e.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_f.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_g.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_h.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_i.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_j.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_k.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_l.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_m.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_n.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_o.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_p.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_q.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_r.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_s.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_t.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_u.jpeg')}}" alt="Sign Image" class="image">
+					<button class="btn">Listen </button>
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_v.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_w.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_x.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_y.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_z.jpeg')}}" alt="Sign Image" class="image">
+				</div>
+				
+			</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		</div>
+	</div><br>
+	
+	<h2>Indian Sign Language:</h2>
+	<p>        <span class="p">I</span>ndian Sign Language (ISL) is the natural language of the Deaf Communities in India. It is a full-fledged language on par with spoken languages, and has its own vocabulary and grammatical structures which are different from all spoken languages used in India. The learning of and about sign language is useful for both deaf and hearing people. For hearing people, knowing ISL gives an insight into the workings of a visual language and allows learners to communicate with deaf people they come into contact with. For deaf learners, it is essential to understand the status and nature of their first and preferred language, and to become confident in expressing themselves fully in sign language. Likewise, they need to be able to understand complex information presented in ISL and appreciate linguistic creativity in sign language.</p>
+	<u><h4>How do most children learn ISL?</h4></u>
+	<p>       In terms of the learners' knowledge of ISL it is assumed that:
+	<ul>
+		<li>1. They have the necessary fine motor skills to produce signs accurately.</li>
+		<li>2. Thay are able to visually follow individual sign language sentences at natural speed of signing.</li>
+		<li>3. They are able to communicate fluently in ISL about every day, non-technical matters.</li>
+	</ul></p>
+	<div class="cointainer swiper">
+		<div class="slider-wrapper">
+			<div class="card-list swiper-wrapper">
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_00.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_11.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_22.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_33.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_44.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_55.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_66.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_77.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_88.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_99.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_a1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_b1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_c1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_d1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_e1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_f1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_g1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_h1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_i1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_j1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_k1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_l1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_m1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_n1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_o1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_p1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_q1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_r1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_s1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_t1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_u1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_v1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_w1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_x1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_y1.jpeg')}}" alt="Sign Image" class="image">
+				</div>               
+				<div class="card-item swiper-slide">
+					<img src="{{url_for('static',filename='image_z1.jpeg')}}" alt="Sign Image" class="image">
+				</div>
+				
+			</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		</div>
+	</div>
+	<h2>Some primary difference between ASL and ISL:</h2> 
+	<p>   <span class="p">T</span>he Indian Sign Language lags behind its American Counterpart as the research in this field is hampered by the lack of standard datasets. Unlike American Sign Language, it uses both hands for making gestures which leads to occlusion of features. ISL is also subject to variance in locality and the existence of multiple signs for the same character. Also some character share the same alphabet (E.g. V and 2 have the same sign, similarly W and 3 have the same sign) and the resolution of the sign is context dependent.</p>
+
+	<p>	  <span class="p">C</span>ommunication is one of the basic requirement for survival in society. Deaf and dumb people communicate among themselves using sign language but normal people find it difficult to understand their language. Extensive work has been done on American sign language recognition but Indian sign language differs significantly from American sign language. ISL uses two hands for communicating where as ASL uses single hand for communicating. Using both hands often leads to security of features duet overlapping of hands. In addition to this, lack of datasets along with variance in sign language with locality has resulted in restrain edfforts in ISL gesture detection. Our project aims attaking the basic step in bridging the communication gap between normal people and deaf and dumb people using Indian sign language. Effective extension of this project to words and common expressions may not only make the deaf and dumb people communicate faster and easier with outer world, but also provide a boost in Developing autonomous systems for understanding and aiding them.</p>
+	</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script>
+		const swiper = new Swiper('.slider-wrapper',{
+			loop:true,
+			grabCursor:true,
+			spaceBetween:30,
+			//If we need pagination
+			pagination:{
+				el: '.swiper-pagination',
+				clickable:true,
+				dynamicBullets:true
+			},
+			//Navigation arrows
+			navigation:{
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		//Responsive breakpoints
+		breakpoints:{
+			0:{
+				slidesPerView: 1
+			},
+			620:{
+				slidesPerView: 2
+			},
+			1024:{
+				slidesPerView: 3
+			}
+		}
+		});
+		</script>
+		
+</body>
+</html>

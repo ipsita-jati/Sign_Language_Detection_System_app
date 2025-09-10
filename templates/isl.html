@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<title>detect</title>
+<head>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+body {
+    background: #efefef;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    height: 80px;
+    padding: 35px 25px;
+    box-sizing: border-box;
+    background: #1876f2;
+    border-bottom: 1px solid #fff;
+}
+.navbar .logo {
+    padding: 22px 20px;
+    height: 48px;
+    float: left;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.navbar .logo span {
+    color: magenta;
+    font-size: 42px;
+}
+.navbar ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar ul li a {
+    line-height: 88px;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar ul li a:hover {
+    background: magenta;
+    border-radius: 6px;
+}
+
+#container {
+    display: flex;
+    margin-top: 85px; /* Adjusted for fixed navbar and buttons */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.video-box {
+    width: 800px;
+    height: 480px;
+    border: 4px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    margin-right: 535px;
+}
+
+#sidebar {
+    width: 200px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    max-height: 480px;
+    overflow-y: auto;
+}
+table{
+	margin-left:1000px;
+    width: 20%;
+}
+
+button {
+	padding: 15px 30px;
+	font-size: 16px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.str1 {
+    background-color: green;
+    color: white;
+    margin-right: 400px;
+}
+.stop {
+    background-color: red;
+    color: white;
+    margin-right: 500px;
+}
+.fixed-buttons {
+    position: fixed;
+    bottom: 5px;
+    display: flex;
+    gap: 10px;
+}
+.i{
+	height:230px;
+	width:230px;
+}
+#videoStream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent overlay from interfering with video controls */
+}
+.output-box {
+  width: 250px;
+  height: 400px;
+  border: 2px solid #333;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left:560px;
+  margin-top: 40px;
+  position: fixed;
+}
+.output{
+    position: fixed;
+    margin-left:560px;
+    color: green;
+}
+.first{
+    margin-top: 70px;
+    font-size: 40px;
+    color: red;
+}
+.second{
+    margin-top: 120px;
+    inline-gap: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">SIGN <span>DETECT</span></div>
+        <ul>
+            <li><a href ="home">Home</a></li>
+            <li><a href ="asl">american</a></li>
+            <li><a href ="#">indian</a></li>
+            <li><a href ="details">details</a></li>
+			<li><a href ="help">help</a></li>
+        </ul>
+    </div>
+    <div id="container">
+        <div class="video-box">
+            <img id="videoStream" src="" alt="Video Stream">
+        </div>
+		
+        <h1 class="output">OUTPUT</h1>
+        <div class="output-box">
+            <div class="first">
+                <h2 id="outputText1">None</h2>
+            </div>
+            <div class="second">
+                <h2>Confidence:</h2></br>
+                <p id="outputText">None</p>
+            </div>
+        </div>
+		
+        <div class="sidebar">
+            <table border="2" width="30%" align="center">
+                <tr>
+                    <th>INDIAN</th>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_00.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_11.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_22.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_33.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_44.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_55.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_66.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_77.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_88.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_99.jpeg')}}"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_a1.jpeg')}}" class="Sign"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_b1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_c1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_d1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_e1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_f1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_g1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_h1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_i1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_j1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_k1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_l1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_m1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_n1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_o1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_p1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_q1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_r1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_s1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_t1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_u1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_v1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_w1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_x1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_y1.jpeg')}}" class="Sig"></td>
+                </tr>
+                <tr>
+                    <td><img src="{{url_for('static',filename='image_z1.jpeg')}}" class="Sig"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="fixed-buttons">
+		<button class="str1" onclick="startVideo()">START</button>
+		<button class="stop" onclick="stopVideo()">STOP</button>
+	</div>
+	
+   <script>
+        document.getElementById('videoStream').style.display = "none"; // hide image
+        function stopVideo() {
+          fetch('/stop', {method: 'POST'})
+            .then(() => {
+              document.getElementById('videoStream').src = "";
+              document.getElementById('videoStream').style.display = "none"; // hide image
+              document.getElementById('outputText1').innerText = "None";
+              document.getElementById('outputText').innerText = "None";
+              clearInterval(window.outputUpdater);
+            });
+        }
+
+        function startVideo() {
+          fetch('/start', {method: 'POST'})
+            .then(() => {
+              let videoElement = document.getElementById('videoStream');
+              videoElement.style.display = "block"; // show image again
+              videoElement.src = "/video_feed2";
+              startOutputUpdater();
+            });
+        }
+
+         function startOutputUpdater() {
+            window.outputUpdater = setInterval(() => {
+                fetch('/get_output')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('outputText1').innerText = data.sign;
+                    document.getElementById('outputText').innerText = data.confidence;
+                });
+            }, 500); // update every 0.5 sec
+        }
+
+        //Auto-stop camera if user navigates away or closes tab
+        window.addEventListener("beforeunload", function () {
+            navigator.sendBeacon("/stop"); // ensures stop is called even when leaving page
+        });
+
+    </script>
+	
+</body>
+</html>

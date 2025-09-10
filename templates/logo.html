@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<title>home</title>
+<head>
+<style>
+*{
+    margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+body{
+	width:100%;
+	height: 100vh;
+	background:url({{url_for('static',filename='background4.jpeg')}});
+	background-size: cover;
+	background-position:center;
+}
+.p{
+	width:100%;
+	position:absolute;
+	margin-top:200px;
+	transform:translateY(-50%);
+	text-align:center;
+	color:white;
+	font-size:50px;
+}
+	
+.btn1{
+	width: 200px;
+	text-align:center;
+	background:transparent;
+	margin-top:400px;
+	color:white;
+	padding: 15px 30px;
+    font-size: 16px;
+	border-radius:25px;
+	border: 2px solid #009688;
+	cursor:pointer;
+	font-weight:bold;
+	position:relative;
+	overflow:hidden;
+}
+.btn2{
+	width: 200px;
+	text-align:center;
+	background:transparent;
+	color:white;
+	margin-top:400px;
+	margin-left:70px;
+	padding: 15px 30px;
+    font-size: 16px;
+	border-radius:25px;
+	border: 2px solid #009688;
+	cursor:pointer;
+	font-weight:bold;
+	position:relative;
+	overflow:hidden;
+}
+button:hover {
+	background-color:#03e9f4;
+	color:#050001;
+	box-shadow:0 0 5px #03e9f4 ,
+			   0 0 25px #03e9f4,
+			   0 0 50px #03e9f4,
+			   0 0 100px #03e9f4;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+.b{
+display:flex;
+justify-content:center;
+
+}
+
+
+</style>
+</head>
+<body>
+	<div class="p">
+		<center><h1>SIGN LANGUAGE DETECTION</h1>
+	</div>
+		<div class="b">
+			<a href ="asl"><button type="button" class="btn1">American Sign Language</button></a></center>
+			<a href ="isl"><button type="button" class="btn2">Indian Sign Language</button></a></center>
+		</div>
+</body>
+</html>
