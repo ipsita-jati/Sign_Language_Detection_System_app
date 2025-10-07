@@ -8,8 +8,6 @@ To excute this Sign Language Detection System follow these steps:
 
 4.Install dependencies from your file: pip install -r requirements.txt
 
-5.Download best_american.pt model weights from https://drive.google.com/drive/folders/1N6Sqax2qGmpPrpA81Z6bj6wlsa8Ckb2h
+5.Download best_american.pt model and best_indian.pt model weights from https://drive.google.com/drive/folders/1N6Sqax2qGmpPrpA81Z6bj6wlsa8Ckb2h
 
-6.Download best_indian.pt model weights from https://drive.google.com/drive/folders/1N6Sqax2qGmpPrpA81Z6bj6wlsa8Ckb2h
-
-7.Run app.py
+6.Run app.py
