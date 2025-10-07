@@ -16,7 +16,7 @@ detected_sign = "None"
 confidence = 0
 
 def generate1():
-    model=YOLO('D:/project2024/best_american.pt')
+    model=YOLO('best_american.pt')
     classNames=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     
     global camera, is_running, detected_sign ,confidence
@@ -55,7 +55,7 @@ def generate1():
             yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')    
             
 def generate2():
-    model=YOLO('D:/project2024/best_indian.pt')
+    model=YOLO('best_indian.pt')
     classNames=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     
     global camera, is_running, detected_sign, confidence
@@ -145,3 +145,4 @@ def get_output():
     
 if __name__ == "__main__":
     app.run(debug=True)
+
